@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Información detallada sobre Turbo Debug">
+    <meta name="description" content="Información detallada sobre el manejo de puertos en microprocesadores">
     <meta name="author" content="">
 
-    <title>Turbo Debug: Herramienta de Depuración Avanzada</title>
+    <title>Manejo de Puertos</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -54,11 +54,11 @@
                     <li >
                         <a href="post-microprocesadores.html">Unidad II</a>
                     </li>
-                    <li class="active">
-                        <a href="/">Unidad III</a>
-                    </li>
                     <li>
-                        <a href="post-puertos.html">Unidad IV</a>
+                        <a href="post-turbo.html">Unidad III</a>
+                    </li>
+                    <li class="active">
+                        <a href="/">Unidad IV</a>
                     </li>
                 </ul>
             </div>
@@ -69,13 +69,13 @@
 
     <!-- Page Header -->
     <!-- Puedes cambiar la imagen de fondo según necesites -->
-    <header class="intro-header" class="opac" style="background-image: url('img/turbo-bg.png')">
+    <header class="intro-header" class="opac" style="background-image: url('img/puertos.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>Turbo Debug: Optimización en Tiempo Real</h1>
-                        <h2 class="subheading">Explorando funcionalidades y beneficios</h2>
+                        <h1>Manejo de Puertos en Microprocesadores</h1>
+                        <h2 class="subheading">Definición, programación y depuración</h2>
                         <span class="meta">Publicado por <a href="#">Bruno Camirra</a> el 26 de febrero de 2025</span>
                     </div>
                 </div>
@@ -88,49 +88,78 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <h2>Introducción a Turbo Debug</h2>
-                    <p>En este post exploramos Turbo Debug, una herramienta avanzada de depuración y optimización diseñada para mejorar la eficiencia en entornos de desarrollo.</p>
-                    <div class="image-placeholder">
-                        <!-- Espacio para una imagen ilustrativa -->
-                        <img src="img/turbo-introduccion.jpg" alt="Introducción a Turbo Debug" class="img-responsive">
-                    </div>
-                    
-                    <h3>Características Principales</h3>
+                    <h2>Definición de Puertos Paralelos y Seriales</h2>
+                    <p>Los puertos paralelos y seriales son interfaces esenciales en los microprocesadores para la comunicación con dispositivos externos.</p>
                     <ul>
-                        <li><strong>Depuración en tiempo real:</strong> Permite identificar y corregir errores al instante con seguimiento detallado de procesos.</li>
-                        <li><strong>Optimización de código:</strong> Detecta cuellos de botella y sugiere mejoras para un rendimiento superior.</li>
-                        <li><strong>Interfaz intuitiva:</strong> Facilita el análisis y la interpretación de datos críticos del sistema.</li>
-                        <li><strong>Integración con herramientas de terceros:</strong> Compatible con múltiples plataformas y servicios para potenciar el desarrollo colaborativo.</li>
+                        <li><strong>Puerto Paralelo:</strong> Permite la transmisión simultánea de múltiples bits, ideal para dispositivos como impresoras.</li>
+                        <li><strong>Puerto Serial:</strong> Transmite datos bit a bit, siendo más eficiente para largas distancias.</li>
                     </ul>
                     <div class="image-placeholder">
                         <!-- Espacio para una imagen ilustrativa -->
-                        <img src="img/turbo-caracteristicas.webp" alt="Características de Turbo Debug" class="img-responsive">
+                        <img src="img/definicion-puerto.jpg" alt="Definición de puertos" class="img-responsive">
                     </div>
                     
-                    <h3>Uso en Entornos de Desarrollo</h3>
+                    <h3>Manejo de Puertos</h3>
+                    <p>El manejo de puertos incluye:</p>
                     <ul>
-                        <li><strong>Integración con IDEs:</strong> Compatible con las principales plataformas de desarrollo, ofreciendo plugins y extensiones.</li>
-                        <li><strong>Reportes detallados:</strong> Ofrece informes precisos que ayudan en la toma de decisiones sobre rendimiento y estabilidad.</li>
-                        <li><strong>Automatización de pruebas:</strong> Simplifica el proceso de identificación de errores en sistemas complejos mediante scripts automatizados.</li>
-                        <li><strong>Soporte multi-plataforma:</strong> Funciona eficientemente en diversos sistemas operativos.</li>
+                        <li>Configuración inicial de los puertos.</li>
+                        <li>Control de flujo de datos.</li>
+                        <li>Supervisión de errores durante la transmisión.</li>
+                    </ul>
+                    
+                    <h3>Interrupciones para el Manejo de Puertos</h3>
+                    <p>Las interrupciones permiten al microprocesador responder a eventos externos de manera eficiente.</p>
+                    <ul>
+                        <li><strong>Interrupciones en puertos paralelos:</strong> Utilizadas para manejar datos en dispositivos de alta velocidad.</li>
+                        <li><strong>Interrupciones en puertos seriales:</strong> Ideales para gestionar datos en transmisiones continuas.</li>
+                    </ul>
+                    <div class="image-placeholder py-3">
+                        <!-- Espacio para una imagen ilustrativa -->
+                        <img src="img/interrupciones-puertos.png" alt="Interrupciones en puertos" class="img-responsive">
+                    </div>
+                    
+                    <h3>Lectura y Escritura en los Puertos</h3>
+                    <p>La lectura y escritura en los puertos se realiza mediante instrucciones específicas:</p>
+                    <ul>
+                        <li><strong>Lectura:</strong> Permite recibir datos desde dispositivos conectados.</li>
+                        <li><strong>Escritura:</strong> Envía datos hacia los dispositivos externos.</li>
+                    </ul>
+                    
+                    <h3>Programación de los Puertos</h3>
+                    <p>La programación de los puertos incluye:</p>
+                    <ul>
+                        <li>Configuración de registros de control.</li>
+                        <li>Definición de parámetros como velocidad y paridad.</li>
+                        <li>Uso de bibliotecas específicas para facilitar la implementación.</li>
                     </ul>
                     <div class="image-placeholder">
                         <!-- Espacio para una imagen ilustrativa -->
-                        <img src="img/turbo-entornos.png" alt="Uso en entornos de desarrollo" class="img-responsive">
+                        <img src="img/programacion-puertos.jpg" alt="Programación de puertos" class="img-responsive">
                     </div>
                     
-                    <h3>Beneficios Adicionales</h3>
-                    <p>Además de sus capacidades básicas, Turbo Debug incluye análisis estático y dinámico, soporte para depuración remota y una comunidad activa que comparte actualizaciones y mejoras constantes. Esto permite a los desarrolladores optimizar sus procesos de manera integral.</p>
-                                        
-                    <h2>Casos de Éxito</h2>
-                    <p>Empresas de diversos sectores han implementado Turbo Debug, observando una reducción significativa en los tiempos de depuración. La herramienta permite mejorar la estabilidad y el desempeño de aplicaciones críticas, respaldada por testimonios y estudios de caso que destacan su eficacia.</p>
+                    <h3>Prueba y Depuración de Errores</h3>
+                    <p>La prueba y depuración de errores es fundamental para garantizar el correcto funcionamiento de los puertos:</p>
+                    <ul>
+                        <li>Identificación de problemas de hardware.</li>
+                        <li>Resolución de conflictos en el software.</li>
+                        <li>Optimización del rendimiento mediante herramientas de monitoreo.</li>
+                    </ul>
+                    
+                    <h2>Casos de Uso</h2>
+                    <p>Los puertos paralelos y seriales se utilizan en:</p>
+                    <ul>
+                        <li>Conexión de impresoras y dispositivos de almacenamiento.</li>
+                        <li>Comunicación con sensores y actuadores en sistemas embebidos.</li>
+                        <li>Automatización industrial y control de maquinaria.</li>
+                    </ul>
                     
                     <h2>Perspectivas Futuras</h2>
-                    <p>El desarrollo continuo de Turbo Debug apunta a incorporar inteligencia artificial para una depuración predictiva y personalizada. Se prevé la integración de nuevas funcionalidades que analizarán patrones de error y ofrecerán soluciones proactivas, estableciendo un nuevo estándar en la industria del software.</p>
-                    <div class="image-placeholder">
-                        <!-- Espacio para una imagen ilustrativa -->
-                        <img src="img/turbo-futuro.jpg" alt="Perspectivas futuras de Turbo Debug" class="img-responsive">
-                    </div>
+                    <p>Con el avance de la tecnología, se espera que los puertos:</p>
+                    <ul>
+                        <li>Soporten mayores velocidades de transmisión.</li>
+                        <li>Integren capacidades de inteligencia artificial para optimizar la comunicación.</li>
+                        <li>Mejoren la interacción entre dispositivos y microprocesadores.</li>
+                    </ul>
                 </div>
             </div>
         </div>
